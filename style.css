@@ -1,0 +1,80 @@
+@charset "UT8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(imagens/fundo-madeira.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.tamanho{
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 100%;
+    width: 7vh;
+    margin: 0;
+    transition: 0.5s;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.tamanho:hover{
+    margin-top: 5px;
+    margin-left: -20px;
+    border: 2px rgba(255, 255, 255, 0.711);
+    border-style: solid;
+    box-shadow: 2px 1px 5px 3px rgba(0, 0, 0, 0.493);
+}
+.position{
+    float: right;
+}
+/* -----------------*/
+.frame-iphone{
+    width: 33vh;
+    height: 64vh;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border: none;
+}
+.tela-iphone{
+    width: 28.75vh;
+    height: 49vh;
+    margin: auto;
+    top: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border: none; 
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 660px) {
+    .tamanho{
+        width: 5vh; 
+    }
+    .position{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .tamanho:hover{
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+}
